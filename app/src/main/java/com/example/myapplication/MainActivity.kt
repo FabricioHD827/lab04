@@ -6,9 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -26,8 +24,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplicationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    // Puedes decidir aquí cuál componente deseas mostrar,
-                    // o cómo combinarlos
                     ViewHolaCurso(modifier = Modifier.padding(innerPadding))
                 }
             }
@@ -35,7 +31,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// Combina las dos versiones del componente que tienes en ambas ramas
 @Composable
 fun ViewHolaCurso(modifier: Modifier = Modifier) {
     Column(
@@ -58,6 +53,15 @@ fun ViewHolaCurso(modifier: Modifier = Modifier) {
             fontSize = 20.sp,
             color = Color.White
         )
+        Spacer(modifier = Modifier.height(24.dp))
+        Button(
+            onClick = { /* Handle button click here */ },
+            modifier = Modifier
+                .padding(top = 16.dp)
+                .fillMaxWidth()
+        ) {
+            Text(text = "Iniciar")
+        }
     }
 }
 
