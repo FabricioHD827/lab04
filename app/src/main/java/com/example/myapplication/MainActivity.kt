@@ -26,36 +26,37 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplicationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ViewHolaCurso(  // Cambiado Greeting por ViewHolaCurso
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    // Puedes decidir aquí cuál componente deseas mostrar,
+                    // o cómo combinarlos
+                    ViewHolaCurso(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
     }
 }
 
+// Combina las dos versiones del componente que tienes en ambas ramas
 @Composable
-fun ViewHolaCurso(modifier: Modifier = Modifier) {  // Agregado el parámetro modifier
+fun ViewHolaCurso(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxWidth()
             .padding(16.dp)
-            .background(MaterialTheme.colorScheme.primary)  // Añadido color de fondo
-            .padding(16.dp),  
+            .background(MaterialTheme.colorScheme.primary)
+            .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = "Welcome to the Course!",
             fontSize = 28.sp,
             fontWeight = FontWeight.Bold,
-            color = Color.White  // Cambiado color del texto
+            color = Color.White
         )
-        Spacer(modifier = Modifier.height(24.dp))  // Espaciado aumentado
+        Spacer(modifier = Modifier.height(24.dp))
         Text(
             text = "Hello, Student!",
             fontSize = 20.sp,
-            color = Color.White  // Cambiado color del texto
+            color = Color.White
         )
     }
 }
