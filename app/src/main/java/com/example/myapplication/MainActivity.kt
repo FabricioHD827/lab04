@@ -35,31 +35,31 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// Combina las dos versiones del componente que tienes en ambas ramas
 @Composable
 fun ViewHolaCurso(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxWidth()
             .padding(16.dp)
-            .background(MaterialTheme.colorScheme.primary)
+            .background(Color.Cyan) // Nuevo color de fondo
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Welcome to the Course!",
-            fontSize = 28.sp,
+            text = "Exploring Compose!",
+            fontSize = 30.sp,
             fontWeight = FontWeight.Bold,
-            color = Color.White
+            color = Color.Black // Nuevo color del texto
         )
         Spacer(modifier = Modifier.height(24.dp))
         Text(
-            text = "Hello, Student!",
-            fontSize = 20.sp,
-            color = Color.White
+            text = "Let's Build Amazing UI",
+            fontSize = 22.sp,
+            color = Color.DarkGray // Nuevo color del texto
         )
     }
 }
+
 
 @Preview(showBackground = true)
 @Composable
