@@ -6,6 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -58,6 +60,28 @@ fun ViewHolaCurso(modifier: Modifier = Modifier) {
             fontSize = 20.sp,
             color = Color.White
         )
+        Spacer(modifier = Modifier.height(24.dp))
+        Button(
+            onClick = { /* Handle button click here */ },
+            modifier = Modifier
+                .padding(top = 16.dp)
+                .fillMaxWidth()
+                .height(50.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFF6200EE),
+                contentColor = Color.White
+            ),
+            shape = MaterialTheme.shapes.large,
+            elevation = ButtonDefaults.elevatedButtonElevation(8.dp)
+        ) {
+            Text(
+                text = "Otro boton",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold,
+                letterSpacing = 1.5.sp
+            )
+        }
+
     }
 }
 
