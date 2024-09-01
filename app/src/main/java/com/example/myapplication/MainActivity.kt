@@ -58,14 +58,6 @@ fun ViewHolaCurso(modifier: Modifier = Modifier) {
             fontSize = 20.sp,
             color = Color.White
         )
-        Spacer(modifier = Modifier.height(24.dp))
-        Text(
-            text = "Fusión de ramas", // Nuevo texto añadido
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Medium,
-            color = Color.White
-        )
-
     }
 }
 
